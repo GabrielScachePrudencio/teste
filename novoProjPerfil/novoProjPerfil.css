@@ -75,15 +75,20 @@ background-size: cover; -cobre tudo-
     border-radius: 50%;
     position: absolute;
     top: 37%;
-    left: 47%;
+    left:47.5%;
     z-index: 1;
     transform: translateY(-50%);
     
+    animation: slide-back 0.2s forwards;
 }
 
 .light #switch button {
-    right: 47%;
-    left: initial;
+    animation: slide-in 0.4s forwards; /*forwards faz terminar a animação a onde ela terminou*/
+    left: 50%;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -177,7 +182,7 @@ a{
 
 
 
-@media (min-width: 700px) {
+@media (min-width: 700px) {    /*se adapta ao tamanho em width de certos aparelhos*/
     :root {
         --bg-url: url(bg-desktop.jpg);
     }
@@ -189,5 +194,24 @@ a{
 
 
 
+/*animação*/
+
+@keyframes slide-in {
+    from {
+        left: 47.5%;
+    }
+    to {
+        left: 50%;
+    }
+
+}
 
 
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 47.5%;
+    }
+}
