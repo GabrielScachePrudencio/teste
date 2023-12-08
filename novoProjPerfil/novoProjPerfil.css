@@ -101,22 +101,24 @@ background-size: cover; -cobre tudo-
 
 
 
+
 .butoes{
     text-align: center;
-    
+     padding: 0 20px 16px 20px;
 
 }
 
 #butao{
     
     height: 60px;
-    width: 50%;
+    width: 100%;
+    max-width: 588px; /*limitador em px mas o maximo que vai em % pelo width*/
     border: 1px solid var(--stroke-color);
     margin-bottom: 16px;
     border-radius: 8px;
     background-color: var(--surface-color);
     backdrop-filter: blur(4px);
-    
+   
     transition: background 0.3s;
 }
 
